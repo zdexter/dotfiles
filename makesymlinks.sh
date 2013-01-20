@@ -29,3 +29,16 @@ for file in $files; do
     echo "Creating symlink to $file in home directory."
     ln -s $dir/$file ~/.$file
 done
+
+dir=$dir/bash_completion.d
+files="git-completion.sh git-flow-completion.sh git-prompt.sh"
+completions_dir=`brew --prefix`/etc/bash_completion.d 
+
+if [ -d $completions_dir ]; then
+  echo "Symlinking bash completion files"
+  for file in $files; do
+    ln -s $dir/$file $completions_dir 
+  done
+fi
+
+echo "Done."
