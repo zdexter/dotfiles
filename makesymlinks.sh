@@ -8,7 +8,7 @@
 
 dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
-files="bashrc vimrc vim zshrc oh-my-zsh"    # list of files/folders to symlink in homedir
+files="gitignore bashrc vimrc vim zshrc oh-my-zsh"    # list of files/folders to symlink in homedir
 
 ##########
 
@@ -40,5 +40,7 @@ if [ -d $completions_dir ]; then
     ln -s $dir/$file $completions_dir 
   done
 fi
+
+git config --global core.excludesfile ~/.gitignore
 
 echo "Done."
