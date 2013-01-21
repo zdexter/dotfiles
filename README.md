@@ -1,7 +1,7 @@
 #### Installation
 
 ```
-brew install git
+brew install git bash-completion
 ```
 
 ```
