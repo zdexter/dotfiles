@@ -13,3 +13,4 @@ syntax on
 colorscheme Tomorrow-Night
 :nmap <Space> i_<Esc>r
 :set ruler
+:set nowrap
