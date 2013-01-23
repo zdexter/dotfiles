@@ -7,3 +7,4 @@ if [ -f `brew --prefix`/etc/bash_completion ]; then
 fi
 
 PS1="\W\$(__git_ps1) \$ "
+export PGHOST=localhost
