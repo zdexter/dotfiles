@@ -8,3 +8,8 @@ fi
 
 PS1="\W\$(__git_ps1) \$ "
 export PGHOST=localhost
+export PYTHONPATH="/usr/local/lib/python2.7/site-packages:$PYTHONPATH"
+
+alias search='find . | xargs grep -I --no-messages --colour --line-number'
+alias sizeof='du -chs'
+
