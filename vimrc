@@ -32,3 +32,10 @@ if $TERM == "xterm-256color" || $TERM == "screen-256color" || $COLORTERM == "gno
     set t_Co=256
 endif
 
+:let coffee_compile_vert = 1
+:let mapleader = ","
+au BufWritePost,BufNewFile,BufReadPost *.coffee inoremap <buffer> <C-C> <Esc>
+command -nargs=1 C CoffeeCompile | :<args>
+vmap <leader>c <esc>:'<,'>:CoffeeCompile<CR>
+map <leader>c :CoffeeCompile<CR>
+
