@@ -1,6 +1,7 @@
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 ### Added by the Heroku Toolbelt
 PATH="/usr/local/heroku/bin:$PATH"
+PATH="/Users/zdexter/Downloads/play-2.1.3:$PATH"
 
 if [ -f `brew --prefix`/etc/bash_completion ]; then
   . `brew --prefix`/etc/bash_completion
@@ -40,4 +41,4 @@ function __my_prompt()
     fi
 }
 
-export PS1="\$(__my_prompt \u \h)"
+export PS1="\$(__my_prompt \u \W)"
