@@ -42,3 +42,4 @@ function __my_prompt()
 }
 
 export PS1="\$(__my_prompt \u \W)"
+export GOPATH="/users/zdexter/gocode"
