@@ -23,23 +23,30 @@ GIT_PS1_SHOWDIRTYSTATE=1
 GIT_PS1_SHOWSTASHSTATE=1
 GIT_PS1_SHOWUNTRACKEDFILES=1
 
-__RED_C=$(tput setaf 1)
-__CYAN_C=$(tput setaf 6)
-__GREEN_C=$(tput setaf 2)
-__YELLOW_C=$(tput setaf 3)
-__RESET_C=$(tput sgr0)
+__RED_C="\[$(tput setaf 1)\]"
+__CYAN_C="\[$(tput setaf 6)\]"
+__GREEN_C="\[$(tput setaf 2)\]"
+__YELLOW_C="\[$(tput setaf 3)\]"
+__RESET_C="\[$(tput sgr0)\]"
 
-function __my_prompt()
+function __my_git()
 {
-    local fpart="${__CYAN_C}$1::$2 ${__GREEN_C}$3${__RESET_C}"
-    local gitpart="${__YELLOW_C}$(__git_ps1 "(%s)")${__RESET_C}"
-    local lpart="${__RED_C}\$${__RESET_C} "
-    if [ "x$(__git_ps1 "(%s)")" != "x" ]; then
-        printf %s "${fpart} ${gitpart} ${lpart}"
+    local gitps1="$(__git_ps1 "(%s)")"
+    if [ "x${gitps1}" != "x" ]; then
+        printf %s "${gitps1} "
     else
-        printf %s "${fpart} ${lpart}"
+        printf %s ""
     fi
 }
 
-export PS1="\$(__my_prompt \u \W)"
+export PS1="${__CYAN_C}\u::\h ${__GREEN_C}\W${__RESET_C} ${__YELLOW_C}\$(__my_git)${__RESET_C}${__RED_C}\$${__RESET_C} "
+
+# Terminal title setter
+
+function set_title()
+{
+    echo -en "\033]0;$*\a"
+}
+
 export GOPATH="/users/zdexter/gocode"
+export COLUMNS=250
