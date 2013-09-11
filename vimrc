@@ -47,6 +47,9 @@ autocmd VimEnter * hi ErrorMsg cterm=underline,bold ctermbg=NONE ctermfg=NONE
 nnoremap <F9> yyp<c-v>$r-
 inoremap <F9> <esc>yyp<c-v>$r-A
 
+" Tagbar
+nnoremap <F8> :TagbarToggle<CR>
+
 " Auto-reload vimrc
 augroup reload_vimrc
     autocmd!
