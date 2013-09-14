@@ -3,14 +3,42 @@ match OverLength /\%>80v.\+/
 call pathogen#infect()
 filetype plugin indent on
 set number
-set shiftwidth=2 tabstop=2
+
 autocmd FileType html setlocal shiftwidth=2 tabstop=2
 autocmd FileType python setlocal shiftwidth=4 tabstop=4
 autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
 set smartindent
 set expandtab
 syntax on
+
+set showmatch                                               " show matching parenthesis/brackets/braces
+set tabstop=4 shiftwidth=4 expandtab                        " prefer 4-space tabs
+set backspace=indent,eol,start                              " sane backspace
+
+" Theme
+set background=dark
 colorscheme solarized
+
+" Colors
+let g:solarized_termtrans=1
+let g:solarized_contrast="high"
+let g:solarized_visibility="low"
+
+hi LineNr ctermbg=none ctermfg=darkgreen
+hi Identifier ctermfg=yellow
+hi Normal ctermfg=gray
+hi Visual cterm=reverse ctermfg=none ctermbg=none
+hi Operator ctermfg=green
+hi CursorLineNr ctermfg=darkyellow
+hi CursorLine cterm=bold ctermfg=none ctermbg=none
+hi CursorColumn cterm=bold ctermfg=none ctermbg=none
+hi OverLength ctermbg=none ctermfg=darkred cterm=underline
+hi colorcolumn ctermbg=none ctermfg=darkred cterm=underline
+
+" Navigate splits with Tab.
+nnoremap <Tab> <C-W>w
+nnoremap <S-Tab> <C-W>W
+
 :nmap <Space> i_<Esc>r
 :set ruler
 :set nowrap
