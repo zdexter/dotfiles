@@ -18,4 +18,7 @@
 	url = https://github.com/Floobits/floobits-vim
 [submodule "vim/colors/solarized"]
 	path = vim/colors/solarized
-	url = git://github.com/altercation/vim-colors-solarized.git
+    url = git://github.com/altercation/vim-colors-solarized.git
+[submodule "vim/bundle/fugitive"]
+    path = vim/bundle/fugitive
+    url = git://github.com/tpope/vim-fugitive.git

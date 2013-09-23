@@ -25,3 +25,5 @@
 [core]
 	autocrlf = input
 	excludesfile = /Users/zdexter/.gitignore
+[web]
+	browser = open
