@@ -11,8 +11,10 @@ set backspace=indent,eol,start                              " sane backspace
 " Configure Indentation
 set tabstop=4 shiftwidth=4 expandtab                        " prefer 4-space tabs
 autocmd FileType html setlocal shiftwidth=2 tabstop=2
+autocmd FileType jade setlocal shiftwidth=2 tabstop=2
 autocmd FileType python setlocal shiftwidth=4 tabstop=4
 autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
+autocmd FileType coffee setlocal shiftwidth=2 tabstop=2
 set smartindent
 set expandtab
 syntax on

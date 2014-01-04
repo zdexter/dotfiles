@@ -1,10 +1,14 @@
-#### Installation
+## Installation
+
+### Dependencies
 
 ```
 brew install git bash-completion
 ```
 
+### Install
+
 ```
-git clone git://github.com/zdexter/dotfiles.git && cd dotfiles &&
-chmod +x makesymlinks.sh && ./makesymlinks.sh
+git clone git://github.com/zdexter/dotfiles.git ~/dotfiles
+cd ~/dotfilies && ./setup.sh
 ```

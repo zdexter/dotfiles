@@ -1,7 +1,4 @@
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-### Added by the Heroku Toolbelt
-PATH="/usr/local/heroku/bin:$PATH"
-PATH="/Users/zdexter/Downloads/play-2.1.3:$PATH"
 
 if [ -f `brew --prefix`/etc/bash_completion ]; then
   . `brew --prefix`/etc/bash_completion
@@ -13,6 +10,7 @@ export PGHOST=localhost
 alias li='ls -liah'
 alias la='ls -AF'
 alias l='ls -F'
+alias g='git'
 alias search='find . | xargs grep -I --no-messages --colour --line-number'
 alias sizeof='du -chs'
 
@@ -46,5 +44,13 @@ function set_title()
     echo -en "\033]0;$*\a"
 }
 
-export GOPATH="/users/zdexter/gocode"
+# Path: Heroku Toolbelt
+PATH="/usr/local/heroku/bin:$PATH"
+
+# Path: Golang
+export GOPATH="$HOME/gocode"
+
+# Path: Play Framework
+PATH="$HOME/Downloads/play-2.1.3:$PATH"
+
 export COLUMNS=250
