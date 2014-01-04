@@ -10,5 +10,5 @@ brew install git bash-completion
 
 ```
 git clone git://github.com/zdexter/dotfiles.git ~/dotfiles
-cd ~/dotfilies && ./setup.sh
+cd ~/dotfiles && ./setup.sh
 ```
