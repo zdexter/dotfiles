@@ -29,3 +29,5 @@
 	excludesfile = /Users/zdexter/.gitignore
 [web]
 	browser = open
+[github]
+	user = zdexter
