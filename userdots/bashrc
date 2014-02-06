@@ -14,6 +14,8 @@ alias g='git'
 alias i='ghi'
 alias search='find . | xargs grep -I --no-messages --colour --line-number'
 alias sizeof='du -chs'
+alias python='/usr/local/bin/python3'
+alias pip='/usr/local/bin/pip3'
 
 # My prompt
 GIT_PS1_SHOWDIRTYSTATE=1
@@ -57,3 +59,6 @@ PATH="$HOME/Downloads/play-2.1.3:$PATH"
 export COLUMNS=250
 
 source ~/.privconf
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
