@@ -3,7 +3,7 @@
 ### Dependencies
 
 ```
-brew install git bash-completion
+brew install git bash-completion python3
 ```
 
 ### Install
