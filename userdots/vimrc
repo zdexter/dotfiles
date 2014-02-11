@@ -40,7 +40,7 @@ set statusline+=\ %P                                        "percent through fil
 
 " Theme
 set background=dark
-colorscheme solarized
+colorscheme hybrid
 
 " Theme and color options
 let g:solarized_termtrans=1
@@ -100,3 +100,4 @@ augroup reload_vimrc
     autocmd BufWritePost $MYVIMRC source $MYVIMRC
 augroup END
 
+set list listchars=tab:»\ ,trail:·,precedes:<,extends:> " 
