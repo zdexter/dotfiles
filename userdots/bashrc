@@ -2,7 +2,12 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 export PGHOST=localhost
 
-source /usr/share/git-core/contrib/completion/git-prompt.sh
+source ~/.git-prompt.sh
+
+# enable bash completion in interactive shells
+if [ -f /etc/bash_completion ]; then
+    . /etc/bash_completion
+fi
 
 # Aliases
 alias li='ls -liah'
