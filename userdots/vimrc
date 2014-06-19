@@ -38,10 +38,6 @@ set statusline+=%cC,                                        "cursor column
 set statusline+=%l/%LL                                      "cursor line/total lines
 set statusline+=\ %P                                        "percent through file
 
-" Theme
-set background=dark
-colorscheme hybrid
-
 " Theme and color options
 let g:solarized_termtrans=1
 let g:solarized_contrast="high"
@@ -57,6 +53,10 @@ hi CursorLine cterm=bold ctermfg=none ctermbg=none
 hi CursorColumn cterm=bold ctermfg=none ctermbg=none
 hi OverLength ctermbg=none ctermfg=darkred cterm=underline
 hi colorcolumn ctermbg=none ctermfg=darkred cterm=underline
+
+" Theme
+set background=dark
+colorscheme solarized
 
 " Clear search highlighting
 nnoremap <CR> :noh<CR><CR>
