@@ -17,10 +17,6 @@ alias g='git'
 alias i='ghi'
 alias search='find . | xargs grep -I --no-messages --colour --line-number'
 alias sizeof='du -chs'
-if [ -f /usr/bin/docker.io ]; then
-    alias d='docker.io'
-    alias docker='docker.io'
-fi
 
 # My prompt
 GIT_PS1_SHOWDIRTYSTATE=1
@@ -67,3 +63,5 @@ source ~/.privconf
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+export TERM=xterm-256color
