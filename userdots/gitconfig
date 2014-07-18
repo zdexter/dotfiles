@@ -23,10 +23,11 @@
 	interactive = auto
 
 [push]
-	default = matching
+	default = simple
 [core]
 	autocrlf = input
-	excludesfile = /home/zdexter/.gitignore
+    excludesfile = /home/zdexter/.gitignore
+    editor = vim
 [web]
 	browser = open
 [github]
