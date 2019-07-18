@@ -104,3 +104,5 @@ augroup reload_vimrc
 augroup END
 
 set list listchars=tab:»\ ,trail:·,precedes:<,extends:> " 
+
+autocmd FileType ruby setlocal expandtab shiftwidth=2 tabstop=2
